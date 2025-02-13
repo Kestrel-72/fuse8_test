@@ -5,7 +5,7 @@ import './Card.css'
 function Card({name="Unknown", status="Unknown", created="Unknown"}) {
     return (
     <>
-    <div class="card">
+    <div className="card">
         <div className="card_name-container">
             <h1 className="card_name">
                 {name}
