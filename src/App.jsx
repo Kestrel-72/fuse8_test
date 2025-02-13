@@ -1,4 +1,5 @@
 import './App.css'
+import SearchBar from './SearchBar.jsx'
 import Card from './Card.jsx'
 
 const testCard = {
@@ -11,6 +12,7 @@ const testCard = {
 function App() {
   return (
     <>
+    <SearchBar />
     <Card name={testCard.name} status={testCard.status} created= {testCard.created}/>
     </>
   )
