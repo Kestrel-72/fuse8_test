@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
 
 function SearchBar() {
     const [input, setInput] = useState("");
