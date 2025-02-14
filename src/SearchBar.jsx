@@ -1,13 +1,12 @@
 import React from 'react';
-import { useState } from 'react';
 
-function SearchBar({setApiResult}) {
-    const [input, setInput] = useState("");
-
+function SearchBar({setInput, setApiResult}) {
     function handleChange(e) {
         setInput(e.target.value);
         if (e.target.value.length > 3) {
             sendQuery(e.target.value);
+        } else {
+            setApiResult(null);
         }
     }
 
@@ -17,7 +16,6 @@ function SearchBar({setApiResult}) {
         fetch(apiUrl + character)
             .then(response => {
                 if (!response.ok) {
-                    setApiResult(null);
                     throw new Error('Character not found');
                 }
                 return response.json();
@@ -34,7 +32,7 @@ function SearchBar({setApiResult}) {
 
     return (
     <>
-        <input className="searchbar" placeholder="Search characters..." onChange={handleChange}></input>
+        <input className="searchBar" placeholder="Search characters..." onChange={handleChange}></input>
     </>
     )
 }
