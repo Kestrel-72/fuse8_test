@@ -1,5 +1,5 @@
 import './App.css'
-import SearchBar from './SearchBar.jsx'
+import SearchBlock from './SearchBlock.jsx'
 import Card from './Card.jsx'
 
 const testCard = {
@@ -12,8 +12,8 @@ const testCard = {
 function App() {
   return (
     <>
-    <SearchBar />
-    <Card name={testCard.name} status={testCard.status} created= {testCard.created}/>
+      <SearchBlock foundCharacters={1}/>
+      <Card name={testCard.name} status={testCard.status} created= {testCard.created}/>
     </>
   )
 }
