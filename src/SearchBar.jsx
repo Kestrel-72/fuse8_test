@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function SearchBar(search) {
+function SearchBar(search="") {
     return (
     <>
-    <input className="searchbar" placeholder="Search characters...">{search}</input>
+        <input className="searchbar" placeholder="Search characters..."></input>
     </>
     )
 }
@@ -12,3 +12,5 @@ function SearchBar(search) {
 SearchBar.propTypes = {
     search: PropTypes.string,
 };
+
+export default SearchBar;
