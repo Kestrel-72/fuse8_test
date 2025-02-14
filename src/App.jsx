@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css'
 import SearchBlock from './SearchBlock.jsx'
 import Card from './Card.jsx'
@@ -10,9 +11,11 @@ const testCard = {
 }
 
 function App() {
+  const [apiResult, setApiResult] = useState(null);
+
   return (
     <>
-      <SearchBlock foundCharacters={1}/>
+      <SearchBlock apiResult={apiResult} setApiResult={setApiResult}/>
       <Card name={testCard.name} status={testCard.status} created= {testCard.created}/>
     </>
   )

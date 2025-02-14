@@ -1,18 +1,12 @@
-import PropTypes from 'prop-types';
-
 import SearchBar from "./SearchBar.jsx";
 
-function SearchBlock( {foundCharacters} ) {
+function SearchBlock( {apiResult, setApiResult} ) {
     return (
         <>
-            <SearchBar />
-            <div>{foundCharacters > 0 ? "Found characters: " + foundCharacters : ""}</div>
+            <SearchBar setApiResult={setApiResult}/>
+            <div>{apiResult != null ? "Found characters: " + apiResult.info.count : ""}</div>
         </>
     )
 }
-
-SearchBlock.propTypes = {
-    foundCharacters: PropTypes.number,
-};
 
 export default SearchBlock;
