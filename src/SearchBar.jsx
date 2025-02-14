@@ -16,8 +16,4 @@ function SearchBar() {
     )
 }
 
-SearchBar.propTypes = {
-    search: PropTypes.string,
-};
-
 export default SearchBar;
