@@ -16,6 +16,12 @@
     }
 }
 
+@media screen and (max-width: 400px) {
+    .searchBar {
+        width: 200px;
+    }
+}
+
 .searchBar::placeholder {
     color: #656EC2;
 }
