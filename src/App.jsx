@@ -9,7 +9,10 @@ function App() {
 
   return (
     <>
-      <SearchBlock apiResult={apiResult} setApiResult={setApiResult} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+      <div className="searchBlock-container">
+        <SearchBlock apiResult={apiResult} setApiResult={setApiResult} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+      </div>
+      
       <CardsList apiResult={apiResult}/>
     </>
   )
