@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css'
 
-function Card({name="Unknown", status="Unknown", created="Unknown"}) {
+function Card({name="Unknown", status="Unknown", created="Unknown", url}) {
     let cardStatusClass;
     if (status == "alive") {
         cardStatusClass = "card_status__alive"
@@ -11,9 +11,12 @@ function Card({name="Unknown", status="Unknown", created="Unknown"}) {
     } else {
         cardStatusClass = "card_status__unknown"
     }
+
     return (
     <>
-    <div className="card">
+    <div className="card" onClick={() => {
+        window.open(url, '_blank')
+    }}>
         <div className="card_name-container">
             <h1 className="card_name">
                 {name}
