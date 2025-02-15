@@ -14,6 +14,12 @@
     font-weight: 400;
 }
 
+@media screen and (max-width: 700px) {
+    .card_name {
+        font-size: 22px;
+    }
+}
+
 .card_bottom-container {
     display: flex;
     flex-direction: row;
