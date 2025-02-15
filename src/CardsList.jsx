@@ -9,7 +9,7 @@ function CardsList( {apiResult} ) {
             <Card name={result.name} status={result.status} created={result.created} url={result.url} key={result.id}/>
         )
         return (
-            <ul>{cardsList}</ul>
+            <>{cardsList}</>
         )
     }
 }

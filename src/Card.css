@@ -1,3 +1,49 @@
 .card {
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 30px;
+    box-shadow: 0px 7px 25px 0px #64646F33;
+    min-height: 70px;
+    cursor: pointer;
+}
+
+.card_name {
+    margin: 0;
+    font-family: "Fira Sans";
+    font-weight: 400;
+}
+
+.card_bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card_status-container {
+    color: #767676;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+.card_status__alive {
+    color: #267504;
+    font-weight: 700;
+}
+
+.card_status__dead {
+    color: #820A0A;
+    font-weight: 700;
+}
+
+.card_status__unknown {
+    color: black;
+    font-weight: 700;
+}
+
+.card_created-container {
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: #767676;
 }

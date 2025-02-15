@@ -4,9 +4,9 @@ import './Card.css'
 
 function Card({name="Unknown", status="Unknown", created="Unknown", url}) {
     let cardStatusClass;
-    if (status == "alive") {
+    if (status == "Alive") {
         cardStatusClass = "card_status__alive"
-    } else if (status == "dead") {
+    } else if (status == "Dead") {
         cardStatusClass = "card_status__dead"
     } else {
         cardStatusClass = "card_status__unknown"
