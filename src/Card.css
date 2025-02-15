@@ -14,12 +14,6 @@
     font-weight: 400;
 }
 
-@media screen and (max-width: 700px) {
-    .card_name {
-        font-size: 22px;
-    }
-}
-
 .card_bottom-container {
     display: flex;
     flex-direction: row;
@@ -56,4 +50,10 @@
     font-size: 14px;
     color: #767676;
     flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 700px) {
+    .card_name {
+        font-size: 22px;
+    }
 }
