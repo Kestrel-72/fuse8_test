@@ -1,4 +1,5 @@
 import Card from './Card.jsx'
+import "./CardsList.css";
 
 function CardsList( {apiResult} ) {
     let cardsList = null;
@@ -9,7 +10,7 @@ function CardsList( {apiResult} ) {
             <Card name={result.name} status={result.status} created={result.created} url={result.url} key={result.id}/>
         )
         return (
-            <>{cardsList}</>
+            <div className="cardsList">{cardsList}</div>
         )
     }
 }

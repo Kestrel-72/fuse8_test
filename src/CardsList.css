@@ -1,0 +1,23 @@
+.cardsList {
+    display: grid;
+    
+    gap: 20px;
+}
+
+@media screen and (min-width: 1401px) {
+    .cardsList {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .cardsList {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cardsList {
+        grid-template-columns: minmax(260px, 1fr);
+    }
+}
