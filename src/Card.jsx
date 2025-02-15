@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 import './Card.css'
 
 function Card({name="Unknown", status="Unknown", created="Unknown"}) {
+    let cardStatusClass;
+    if (status == "alive") {
+        cardStatusClass = "card_status__alive"
+    } else if (status == "dead") {
+        cardStatusClass = "card_status__dead"
+    } else {
+        cardStatusClass = "card_status__unknown"
+    }
     return (
     <>
     <div className="card">
@@ -12,11 +20,11 @@ function Card({name="Unknown", status="Unknown", created="Unknown"}) {
             </h1>
         </div>
         <div className="card_bottom-container">
-            <div className="card_status">
-                {status}
+            <div className="card_status-container">
+                Status: <span className={`card_status ${cardStatusClass}`}>{status}</span>
             </div>
-            <div className="card_created">
-                {created}
+            <div className="card_created-container">
+                Created: {created}
             </div>
         </div>
     </div>
