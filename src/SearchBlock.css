@@ -1,0 +1,10 @@
+.searchBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.charactersCount {
+    font-family: "Montserrat";
+    padding-left: 39px;
+}

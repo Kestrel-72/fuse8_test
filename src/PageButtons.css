@@ -1,0 +1,17 @@
+.pageButton {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 4px;
+    min-width: 180px;
+}
+
+.pageButton:disabled {
+    cursor: default;
+}
+
+.pageButtons {
+    display: flex;
+    gap: 12px;
+}
