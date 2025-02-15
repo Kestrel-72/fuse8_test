@@ -33,7 +33,7 @@ function SearchBar({setInput, setApiResult, setCurrentPage}) {
 
     return (
     <>
-        <input className="searchBar" placeholder="Search characters..." onChange={handleChange}></input>
+        <input className="searchBar" placeholder="Search characters..." autoFocus onChange={handleChange}></input>
     </>
     )
 }
