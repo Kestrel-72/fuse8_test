@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchBar({setInput, setApiResult}) {
+function SearchBar({setInput, setApiResult, setCurrentPage}) {
     function handleChange(e) {
         setInput(e.target.value);
         if (e.target.value.length > 3) {
@@ -22,6 +22,7 @@ function SearchBar({setInput, setApiResult}) {
             })
             .then(data => {
                 setApiResult(data);
+                setCurrentPage(1);
                 console.log(data);
             })
             .catch(error => {
