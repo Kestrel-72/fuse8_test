@@ -7,7 +7,7 @@ function CardsList( {apiResult} ) {
         return;
     } else {
         cardsList = apiResult.results.map(result => 
-            <Card name={result.name} status={result.status} created={result.created} url={result.url} key={result.id}/>
+            <Card name={result.name} status={result.status} created={result.created} species={result.species} url={result.url} key={result.id}/>
         )
         return (
             <div className="cardsList">{cardsList}</div>

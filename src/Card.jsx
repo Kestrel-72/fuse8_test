@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css'
 
-function Card({name="Unknown", status="Unknown", created="Unknown", url}) {
+function Card({name="Unknown", status="Unknown", created="Unknown", species, url}) {
     let cardStatusClass;
     if (status == "Alive") {
         cardStatusClass = "card_status__alive"
@@ -19,7 +19,7 @@ function Card({name="Unknown", status="Unknown", created="Unknown", url}) {
     }}>
         <div className="card_name-container">
             <h1 className="card_name">
-                {name}
+                {name} - {species}
             </h1>
         </div>
         <div className="card_bottom-container">
