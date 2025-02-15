@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import SearchBar from "./SearchBar.jsx";
+import PageButtons from './PageButtons.jsx';
 
-function SearchBlock( {apiResult, setApiResult, setCurrentPage} ) {
+function SearchBlock( {apiResult, setApiResult, currentPage, setCurrentPage} ) {
     const [input, setInput] = useState("");
     let charactersCount = "";
     if (input.length > 3 && apiResult == null) {
@@ -14,6 +15,7 @@ function SearchBlock( {apiResult, setApiResult, setCurrentPage} ) {
         <>
             <SearchBar setInput={setInput} setApiResult={setApiResult} setCurrentPage={setCurrentPage}/>
             <div className="charactersCount">{charactersCount}</div>
+            <PageButtons apiResult={apiResult} setApiResult={setApiResult} currentPage={currentPage} setCurrentPage={setCurrentPage} />
         </>
     )
 }

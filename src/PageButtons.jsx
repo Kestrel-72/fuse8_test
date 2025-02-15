@@ -1,6 +1,6 @@
 function PageButtons({ apiResult, setApiResult, currentPage, setCurrentPage}) {
     let buttons = [];
-    if (apiResult != null && apiResult.info.pages > 1) {
+    if (apiResult != null) {
         buttons.push(
             <input
                 type="button"

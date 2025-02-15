@@ -10,8 +10,7 @@ function App() {
 
   return (
     <>
-      <SearchBlock apiResult={apiResult} setApiResult={setApiResult} setCurrentPage={setCurrentPage}/>
-      <PageButtons apiResult={apiResult} setApiResult={setApiResult} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <SearchBlock apiResult={apiResult} setApiResult={setApiResult} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       <CardsField apiResult={apiResult} setApiResult={setApiResult}/>
     </>
   )
