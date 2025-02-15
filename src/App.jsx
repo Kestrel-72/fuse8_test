@@ -1,14 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 import SearchBlock from './SearchBlock.jsx'
-import Card from './Card.jsx'
-
-const testCard = {
-  name: "Rick",
-  status: "Alive",
-  created: "13.02.2025",
-  id: 1
-}
+import CardsList from './CardsList.jsx'
 
 function App() {
   const [apiResult, setApiResult] = useState(null);
@@ -16,7 +9,7 @@ function App() {
   return (
     <>
       <SearchBlock apiResult={apiResult} setApiResult={setApiResult}/>
-      <Card name={testCard.name} status={testCard.status} created= {testCard.created}/>
+      <CardsList apiResult={apiResult}/>
     </>
   )
 }
