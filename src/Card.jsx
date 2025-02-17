@@ -12,6 +12,13 @@ function Card({name="Unknown", status="Unknown", created="Unknown", species, url
         cardStatusClass = "card_status__unknown"
     }
 
+    let date = new Date(created);
+    date = new Intl.DateTimeFormat("ru-RU", {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    }).format(date);
+
     return (
     <>
     <div className="card" onClick={() => {
@@ -27,7 +34,7 @@ function Card({name="Unknown", status="Unknown", created="Unknown", species, url
                 Status: <span className={`card_status ${cardStatusClass}`}>{status}</span>
             </div>
             <div className="card_created-container">
-                Created: {created}
+                Created: {date}
             </div>
         </div>
     </div>
